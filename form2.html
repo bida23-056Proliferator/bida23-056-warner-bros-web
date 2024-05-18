@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
+    <title>Create Account</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -69,20 +69,6 @@
             outline: none;
         }
 
-        .create-account {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .create-account a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .create-account a:hover {
-            text-decoration: underline;
-        }
-
         @media (max-width: 600px) {
             .container {
                 padding: 15px;
@@ -93,39 +79,33 @@
 <body>
 
 <div class="container">
-    <h2>Sign In</h2>
-    <form id="signInForm" action="#" method="post">
+    <h2>Create Account</h2>
+    <form id="createAccountForm" action="#" method="post">
         <div class="form-group">
             <label for="username">Username</label>
             <input type="text" id="username" name="username" required aria-label="Username">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required aria-label="Email">
         </div>
         <div class="form-group">
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required aria-label="Password">
         </div>
         <div class="form-group">
-            <input type="submit" value="Sign In">
+            <input type="submit" value="Create Account">
         </div>
     </form>
-    <div class="create-account">
-        <p>Don't have an account? <a href="#" id="createAccountLink">Create an account</a></p>
-    </div>
 </div>
 
 <script>
-    document.getElementById('signInForm').addEventListener('submit', function(event) {
+    document.getElementById('createAccountForm').addEventListener('submit', function(event) {
         event.preventDefault();
-        alert('Sign in Succesful!');
+        alert('Thank you for creating an account!');
         window.location.href = 'home2.html'; 
-    });
-
-    document.getElementById('createAccountLink').addEventListener('click', function(event) {
-        event.preventDefault();
-        alert('Redirecting to the create account page...');
-        window.location.href = 'form2.html'; 
     });
 </script>
 
 </body>
 </html>
-
